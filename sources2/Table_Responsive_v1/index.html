@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Table V01</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<script src="./js/server.js"></script>
+
+</head>
+
+<body>
+
+	<div class="button1">
+		<button onclick="sortTable()">Sort by rank</button><br>
+	</div>
+	<div class="button2">
+		<button onclick="compare_unis()">Compare</button><br>
+	</div>
+	<div class="button3">
+		<a href="index1.html"><button>Home</button></a><br>
+	</div>
+	<div class="hiddentext">Compare universities
+		<div class="compare">
+			<button onclick="compare()">Compare selected choices</button>
+		</div>
+	</div>
+
+
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table id="myTable">
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">Rank</th>
+								<th class="column2">Name</th>
+								<th class="column3">Domestic under</th>
+								<th class="column4">Foriegn Under</th>
+								<th class="column5">Domestic grad</th>
+								<th class="column6">Foriegn grad</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr class="uni_0">
+								<td class="column1">43</td>
+
+								<td class="column2"><input type="checkbox"> <a
+										href="https://www.msvu.ca/en/home/future-students/viewbook.aspx">Mount Saint
+
+										Vincent University</a></td>
+
+								<td class="column3">$6,649-$7,932</td>
+
+								<td class="column4">$15,864-$15,864</td>
+
+								<td class="column5">$5,193-$5,963</td>
+
+								<td class="column6">$10,722-$10,722</td>
+
+							</tr>
+
+							<tr class="uni_1">
+								<td class="column1">28</td>
+
+								<td class="column2"><input type="checkbox"><a href="https://www.stfx.ca/admissions">St.
+										Francis Xavier
+
+										University</a></td>
+
+								<td class="column3">$7,547-$8,830</td>
+
+								<td class="column4">$17,660-$17,660</td>
+
+								<td class="column5">$4,895-$5,665</td>
+
+								<td class="column6">$11,330-$11,330</td>
+
+							</tr>
+
+							<tr class="uni_2">
+								<td class="column1">36</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://smu.ca/future-students/welcome.html">Saint Mary's
+
+										University</a></td>
+
+								<td class="column3">$6,617-$7,900</td>
+
+								<td class="column4">$17,080-$17,080</td>
+
+								<td class="column5">$4,264-$7,564</td>
+
+								<td class="column6">$12,284-$16,751</td>
+
+							</tr>
+
+							<tr class="uni_3">
+								<td class="column1">46</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.dal.ca/admissions/future-students.html">Cape
+
+										Breton University</a></td>
+
+								<td class="column3">$6,757-$8,040</td>
+
+								<td class="column4">$16,080-$16,080</td>
+
+								<td class="column5">$8,777-$10,060*</td>
+
+								<td class="column6">$18,100-$18,100*</td>
+
+							</tr>
+
+							<tr class="uni_4">
+								<td class="column1">44</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.msvu.ca/en/home/future-students/viewbook.aspx">UniversitÃ© de
+
+										Moncton</a></td>
+
+								<td class="column3">$6,066-$6,423</td>
+
+								<td class="column4">$11,771-$11,771</td>
+
+								<td class="column5">$2,775-$8,538</td>
+
+								<td class="column6">$5,445-$16,086</td>
+
+							</tr>
+
+							<tr class="uni_5">
+								<td class="column1">47</td>
+
+								<td class="column2"><input type="checkbox"><a href="https://www.stfx.ca/admissions">St.
+										Thomas University</a>
+
+								</td>
+
+								<td class="column3">$7,149-$7,149</td>
+
+								<td class="column4">$16,068-$16,068</td>
+
+								<td class="column5">*</td>
+
+								<td class="column6">*</td>
+
+							</tr>
+
+							<tr class="uni_6">
+								<td class="column1">39</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.ubishops.ca/future-current-students/">Bishop's
+
+										University</a></td>
+
+								<td class="column3">$2,544-$7,940</td>
+
+								<td class="column4">$17,530-$19,581</td>
+
+								<td class="column5">$2,544-$7,940*</td>
+
+								<td class="column6">$17,530-$17,530*</td>
+
+							</tr>
+
+							<tr class="uni_7">
+								<td class="column1">4</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.mcgill.ca/servicepoint/futurestudents">McGill
+
+										University</a></td>
+
+								<td class="column3">$2,544-$7,940</td>
+
+								<td class="column4">$17,421-$20,229</td>
+
+								<td class="column5">$2,544-$7,940</td>
+
+								<td class="column6">$15,637-$18,110</td>
+
+							</tr>
+
+							<tr class="uni_8">
+								<td class="column1">10</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://admission.umontreal.ca/en/">UniversitÃ© de
+
+										MontrÃ©al</a></td>
+
+								<td class="column3">$2,544-$7,940</td>
+
+								<td class="column4">$17,421-$19,459</td>
+
+								<td class="column5">$2,544-$7,940</td>
+
+								<td class="column6">$15,637-$17,421</td>
+
+							</tr>
+
+							<tr class="uni_9">
+								<td class="column1">26</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://etudier.uqam.ca/english/how-to-apply">UniversitÃ© du
+
+										QuÃ©bec Ã  MontrÃ©al</a></td>
+
+								<td class="column3">$2,544-$7,940</td>
+
+								<td class="column4">$17,421-$19,459</td>
+
+								<td class="column5">$2,544-$7,940</td>
+
+								<td class="column6">$15,637-$17,421</td>
+
+							</tr>
+
+							<tr class="uni_10">
+								<td class="column1">15</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.ulaval.ca/en/future-students">UniversitÃ©
+
+										Laval</a></td>
+
+								<td class="column3">$2,544-$7,940</td>
+
+								<td class="column4">$17,421-$19,459</td>
+
+								<td class="column5">$2,544-$7,940</td>
+
+								<td class="column6">$15,637-$17,421</td>
+
+							</tr>
+
+							<tr class="uni_11">
+								<td class="column1">19</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.usherbrooke.ca/international/en/getting-a-degree-at-udes/admission/">UniversitÃ©
+
+										de Sherbrooke</a></td>
+
+								<td class="column3">$2,544-$7,940</td>
+
+								<td class="column4">$17,421-$19,459</td>
+
+								<td class="column5">$2,544-$7,940</td>
+
+								<td class="column6">$15,637-$17,421</td>
+
+							</tr>
+
+							<tr class="uni_12">
+								<td class="column1">17</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.concordia.ca/finearts/future-students.html">Concordia
+
+										University</a></td>
+
+								<td class="column3">$2,544-$7,940</td>
+
+								<td class="column4">$17,530-$19,581</td>
+
+								<td class="column5">$1,908-$5,955</td>
+
+								<td class="column6">$11,728-$13,148</td>
+
+							</tr>
+
+							<tr class="uni_13">
+								<td class="column1">38</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://brocku.ca/admissions/future-students/">Brock
+
+										University</a></td>
+
+								<td class="column3">$5,917-$6,089</td>
+
+								<td class="column4">$26,558-$26,558</td>
+
+								<td class="column5">$5,850-$8,176</td>
+
+								<td class="column6">$23,504-$23,504</td>
+
+							</tr>
+
+							<tr class="uni_14">
+								<td class="column1">24</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://carleton.ca/prospective/">Carleton University</a>
+
+								</td>
+
+								<td class="column3">$6,067-$9,614</td>
+
+								<td class="column4">$25,503-$33,757</td>
+
+								<td class="column5">$4,952-$6,514</td>
+
+								<td class="column6">$13,060-$15,800</td>
+
+							</tr>
+
+							<tr class="uni_15">
+								<td class="column1">12</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://admission.uoguelph.ca/">University of Guelph</a>
+
+								</td>
+
+								<td class="column3">$5,893-$6,091</td>
+
+								<td class="column4">$9,730-$24,300</td>
+
+								<td class="column5">$4,587-$4,993</td>
+
+								<td class="column6">$5,650-$14,501</td>
+
+							</tr>
+
+							<tr class="uni_16">
+								<td class="column1">42</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.lakeheadu.ca/current-students/student-services/accessibility/prospective-students">Lakehead
+
+										University</a></td>
+
+								<td class="column3">$5,398-$5,985</td>
+
+								<td class="column4">$23,731-$23,731</td>
+
+								<td class="column5">$4,894-$5,390</td>
+
+								<td class="column6">$14,934-$14,934</td>
+
+							</tr>
+
+							<tr class="uni_17">
+								<td class="column1">5</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://future.mcmaster.ca/">McMaster University</a></td>
+
+								<td class="column3">$5,955-$6,043</td>
+
+								<td class="column4">$26,981-$30,744</td>
+
+								<td class="column5">$6,307-$6,307</td>
+
+								<td class="column6">$16,761-$17,096</td>
+
+							</tr>
+
+							<tr class="uni_18">
+								<td class="column1">18</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.uottawa.ca/en/future-students">University of
+
+										Ottawa</a></td>
+
+								<td class="column3">$6,088-$6,088</td>
+
+								<td class="column4">$36,161-$36,161</td>
+
+								<td class="column5">$6,367-$7,798</td>
+
+								<td class="column6">$16,334-$27,519</td>
+
+							</tr>
+
+							<tr class="uni_19">
+								<td class="column1">7</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="http://www.queensu.ca/registrar/futurestudents">Queen's
+
+										University</a></td>
+
+								<td class="column3">$6,083-$6,083</td>
+
+								<td class="column4">$39,098-$46,191</td>
+
+								<td class="column5">$5,773-$5,773</td>
+
+								<td class="column6">$12,927-$12,927</td>
+
+							</tr>
+
+							<tr class="uni_20">
+								<td class="column1">1</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.utoronto.ca/future-students">University of
+
+										Toronto</a></td>
+
+								<td class="column3">$6,100-$11,420</td>
+
+								<td class="column4">$35,890-$55,110</td>
+
+								<td class="column5">$6,210-$10,350</td>
+
+								<td class="column6">$6,210-$37,700</td>
+
+							</tr>
+
+							<tr class="uni_21">
+								<td class="column1">30</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.trentu.ca/futurestudents/">Trent University</a>
+
+								</td>
+
+								<td class="column3">$6,118-$6,118</td>
+
+								<td class="column4">$19,734-$21,385</td>
+
+								<td class="column5">$5,394-$5,394</td>
+
+								<td class="column6">$13,194-$13,194</td>
+
+							</tr>
+
+							<tr class="uni_22">
+								<td class="column1">2</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://uwaterloo.ca/pathway/future-students">University of
+
+										Waterloo</a></td>
+
+								<td class="column3">$6,128-$7,611</td>
+
+								<td class="column4">$28,744-$35,251</td>
+
+								<td class="column5">$3,504-$4,508</td>
+
+								<td class="column6">$4,008-$14,084</td>
+
+							</tr>
+
+							<tr class="uni_23">
+								<td class="column1">8</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.uwo.ca/future_students/">Western University
+
+										(excludes colleges)</a></td>
+
+								<td class="column3">$6,050-$6,050</td>
+
+								<td class="column4">$27,719-$31,042</td>
+
+								<td class="column5">$6,360-$6,360</td>
+
+								<td class="column6">$18,247-$18,247</td>
+
+							</tr>
+
+							<tr class="uni_24">
+								<td class="column1">40</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="http://www.uwindsor.ca/apply-now">University of Windsor</a>
+
+								</td>
+
+								<td class="column3">$5,800-$5,800</td>
+
+								<td class="column4">$24,410-$24,680</td>
+
+								<td class="column5">$7,179-$7,179</td>
+
+								<td class="column6">$22,650-$22,650</td>
+
+							</tr>
+
+							<tr class="uni_25">
+								<td class="column1">21</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://futurestudents.yorku.ca/">York University</a></td>
+
+								<td class="column3">$6,118-$6,118</td>
+
+								<td class="column4">$28,633-$28,633</td>
+
+								<td class="column5">$2,871-$2,871</td>
+
+								<td class="column6">$12,550-$12,550</td>
+
+							</tr>
+
+							<tr class="uni_26">
+								<td class="column1">25</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.wlu.ca/future-students/index.html">Wilfrid
+
+										Laurier University</a></td>
+
+								<td class="column3">$5,663-$7,081</td>
+
+								<td class="column4">$25,320-$25,320</td>
+
+								<td class="column5">$4,536-$11,543</td>
+
+								<td class="column6">$10,962-$22,980</td>
+
+							</tr>
+
+							<tr class="uni_27">
+								<td class="column1">16</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.ryerson.ca/future-students/">Ryerson
+
+										University</a></td>
+
+								<td class="column3">$6,081-$6,110</td>
+
+								<td class="column4">$25,680-$26,000</td>
+
+								<td class="column5">$4,307-$16,278</td>
+
+								<td class="column6">$20,640-$28,020</td>
+
+							</tr>
+
+							<tr class="uni_28">
+								<td class="column1">49</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.nipissingu.ca/future-students">Nipissing
+
+										University</a></td>
+
+								<td class="column3">$5,781-$5,781</td>
+
+								<td class="column4">$19,325-$19,325</td>
+
+								<td class="column5">$8,506-$8,506</td>
+
+								<td class="column6">$18,350-$18,350</td>
+
+							</tr>
+
+							<tr class="uni_29">
+								<td class="column1">48</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.brandonu.ca/future-students/">Brandon
+
+										University</a></td>
+
+								<td class="column3">$3,737-$3,969</td>
+
+								<td class="column4">$9,341-$14,685</td>
+
+								<td class="column5">$2,853-$3,139*</td>
+
+								<td class="column6">$4,280-$5,992*</td>
+
+							</tr>
+
+							<tr class="uni_30">
+								<td class="column1">23</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="http://umanitoba.ca/student/future/">University of
+
+										Manitoba</a></td>
+
+								<td class="column3">$3,916-$4,516</td>
+
+								<td class="column4">$14,982-$17,375</td>
+
+								<td class="column5">$5,148-$5,148</td>
+
+								<td class="column6">$11,325-$11,325</td>
+
+							</tr>
+
+							<tr class="uni_31">
+								<td class="column1">20</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://artsandscience.usask.ca/undergraduate/info/prospective.php">University
+
+										of Saskatchewan</a></td>
+
+								<td class="column3">$6,452-$6,607</td>
+
+								<td class="column4">$17,615-$18,038</td>
+
+								<td class="column5">$2,840-$2,840</td>
+
+								<td class="column6">$4,487-$4,487</td>
+
+							</tr>
+
+							<tr class="uni_32">
+								<td class="column1">6</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.ualberta.ca/prospective-students.html">University of
+
+										Alberta</a></td>
+
+								<td class="column3">$5,321-$5,321</td>
+
+								<td class="column4">$22,267-$22,267</td>
+
+								<td class="column5">$3,745-$3,745</td>
+
+								<td class="column6">$12,671-$12,671</td>
+
+							</tr>
+
+							<tr class="uni_33">
+								<td class="column1">11</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.ucalgary.ca/future-students">University of
+
+										Calgary</a></td>
+
+								<td class="column3">$5,386-$5,386</td>
+
+								<td class="column4">$18,338-$18,338</td>
+
+								<td class="column5">$5,594-$7,148</td>
+
+								<td class="column6">$12,696-$16,226</td>
+
+							</tr>
+
+							<tr class="uni_34">
+								<td class="column1">35</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.uleth.ca/future-student/">University of
+
+										Lethbridge</a></td>
+
+								<td class="column3">$4,974-$4,974</td>
+
+								<td class="column4">$12,641-$17,527</td>
+
+								<td class="column5">$5,838-$5,838</td>
+
+								<td class="column6">$13,532-$13,532</td>
+
+							</tr>
+
+							<tr class="uni_35">
+								<td class="column1">3</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.ubc.ca/prospective-students/">The University of
+
+										British Columbia</a></td>
+
+								<td class="column3">$5,399-$7,185</td>
+
+								<td class="column4">$29,713-$38,052</td>
+
+								<td class="column5">$4,996-$4,996</td>
+
+								<td class="column6">$8,777-$8,777</td>
+
+							</tr>
+
+							<tr class="uni_36">
+								<td class="column1">9</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.sfu.ca/fas/prospective-students.html">Simon
+
+										Fraser University</a></td>
+
+								<td class="column3">$5,761-$5,761</td>
+
+								<td class="column4">$24,799-$28,247</td>
+
+								<td class="column5">$3,818-$3,818</td>
+
+								<td class="column6">$3,818-$3,818</td>
+
+							</tr>
+
+							<tr class="uni_37">
+								<td class="column1">13</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.uvic.ca/future-students/index.php">University
+
+										of Victoria</a></td>
+
+								<td class="column3">$5,696-$5,696</td>
+
+								<td class="column4">$19,536-$24,926</td>
+
+								<td class="column5">$5,916-$5,916</td>
+
+								<td class="column6">$7,462-$7,462</td>
+
+							</tr>
+
+							<tr class="uni_38">
+								<td class="column1">34</td>
+
+								<td class="column2"><input type="checkbox"><a
+										href="https://www.unbc.ca/graduate-programs">University of
+
+										Northern British Columbia</a></td>
+
+								<td class="column3">$5,424-$5,424</td>
+
+								<td class="column4">$21,589-$21,589</td>
+
+								<td class="column5">$3,363-$3,363</td>
+
+								<td class="column6">$3,363-$3,363</td>
+
+							</tr>
+
+							<tr class="uni_39">
+
+								<td class="column1">41 </td>
+
+								<td class="column2"><input type="checkbox"> <a
+										href="https://www.upei.ca/future-students">University of Prince Edward
+										Island</a></td>
+
+								<td class="column3">$6,270-$6,270</td>
+
+								<td class="column4">$13,590-$13,590</td>
+
+								<td class="column5">$4,215-$7,650*</td>
+
+								<td class="column6">$11,535-$14,970*</td>
+
+							</tr>
+
+							<tr class="uni_40">
+
+								<td class="column1">29</td>
+
+								<td class="column2"><input type="checkbox"> <a
+										href="https://www2.acadiau.ca/future-students.html">Acadia
+
+										University</a></td>
+
+								<td class="column3">$7,650-$8,933</td>
+
+								<td class="column4">$17,884-$17,884</td>
+
+								<td class="column5">$7,600-$8,883</td>
+
+								<td class="column6">$18,058-$18,058</td>
+
+							</tr>
+
+							<tr class="uni_41">
+
+								<td class="column1">14</td>
+
+								<td class="column2"><input type="checkbox"> <a
+										href="https://www.dal.ca/admissions/future-students.html">Dalhousie
+
+										University</a></td>
+
+								<td class="column3">$6,583-$7,866</td>
+
+								<td class="column4">$17,661-$19,134</td>
+
+								<td class="column5">$7,048-$8,331</td>
+
+								<td class="column6">$18,126-$19,599</td>
+
+							</tr>
+
+						</tbody>
+
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</body>
+
+</html>
